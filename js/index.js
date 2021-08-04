@@ -3,8 +3,8 @@
 //All button variables
 const allButtons = document.querySelectorAll('.btn');
 
-//Header variable
-const funInTheSun = document.querySelector('.destination p');
+//Nav links
+const navLinks = document.querySelectorAll('.nav-link');
 
 //logoHeading 
 const logoHeading = document.querySelector('main-navigation');
@@ -79,10 +79,32 @@ function rickRoll(event){
 };
 document.addEventListener('keydown', rickRoll);
 
-//7
+//7 mousemove
+function mouseMove(event){
+    event.target.style.color = "pink"
+};
+navLinks.forEach(function(item){
+    item.addEventListener('mousemove', mouseMove);
+});
 
-//8
+//8 mouseleave
+function mouseLeave(event){
+    event.target.style.color ="black";
+};
+navLinks.forEach(item => {
+    item.addEventListener('mouseleave', mouseLeave);
+});
 
-//9
+//9 keyup
+function keyUp(event){
+    if(event.key === 'Escape'){
+        window.close()
+}};
 
-//10
+document.addEventListener('keyup', keyUp)
+
+//10 
+function clickHome(event){
+    window.location = "http://localhost:1234/";
+};
+navLinks[1].addEventListener('click', clickHome);
