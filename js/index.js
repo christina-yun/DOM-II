@@ -4,7 +4,7 @@
 const allButtons = document.querySelectorAll('.btn');
 
 //Header variable
-const header = document.querySelector('.intro');
+const funInTheSun = document.querySelector('.destination p');
 
 //logoHeading 
 const logoHeading = document.querySelector('main-navigation');
@@ -16,6 +16,16 @@ const adventureImg = allImg[1];
 const funImg = allImg[2];
 const destinationImg = allImg[3];
 
+//testing creating a youtube video variable
+// let youtube;
+
+// youtube = document.createElement('youtube');
+// // youtube.innerHTML = "<iframe width='560' height= '315' src='https://www.youtube.com/embed/dQw4w9WgXcQ' title='YouTube video player' frameborder='0' allow=accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+// youtube.style.display = 'none';
+// youtube.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+
+// document.content-destination.appendChild('youtube');
+// console.log(youtube);
 
 //1 Buttons mouseover
 
@@ -54,4 +64,25 @@ function changeFunBus(event){
 };
 funBusImg.addEventListener('mousedown', changeFunBus);
 
-//5 
+//5 Double click
+
+function disappear(event){
+    destinationImg.style.display = 'none'
+}
+destinationImg.addEventListener('dblclick', disappear);
+
+//6 keydown
+function rickRoll(event){
+    if(event.key === 'c'){
+        window.location = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+    }
+};
+document.addEventListener('keydown', rickRoll);
+
+//7
+
+//8
+
+//9
+
+//10
